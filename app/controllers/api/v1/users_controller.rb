@@ -23,6 +23,11 @@ class Api::V1::UsersController < ApplicationController
       end
     end
 
+    def destroy
+        @user.destroy
+        head 204
+    end
+
     private
   
     # Only allow a trusted parameter "white list" through.
